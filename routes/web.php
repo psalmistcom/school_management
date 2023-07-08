@@ -27,4 +27,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
+    Route::get('/admin/list', function () {
+        return view('admin.admin.list');
+    });
 });
