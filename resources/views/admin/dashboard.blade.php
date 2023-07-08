@@ -1,3275 +1,1583 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StrikingDash</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-
-    <!-- inject:css-->
-
-    <link rel="stylesheet" href="{{ url('/css/plugin.min.css') }} ">
-    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
-
-    <!-- endinject -->
-
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ url('/plugins/fontawesome-free/css/all.min.css') }}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="{{ url('/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{{ url('/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="{{ url('/plugins/jqvmap/jqvmap.min.css') }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ url('/dist/css/adminlte.min.css') }}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{{ url('/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{ url('/plugins/daterangepicker/daterangepicker.css') }}">
+    <!-- summernote -->
+    <link rel="stylesheet" href="{{ url('/plugins/summernote/summernote-bs4.min.css') }}">
 </head>
 
-<body class="layout-light side-menu overlayScroll">
-    <div class="mobile-search"></div>
-
-    <div class="mobile-author-actions"></div>
-    <header class="header-top">
-        <nav class="navbar navbar-light">
-            <div class="navbar-left">
-                <a href="#" class="sidebar-toggle">
-                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
-                <a class="navbar-brand" href="#"><img class="svg dark" src="img/svg/logo_dark.svg"
-                        alt="svg"><img class="light" src="img/logo_white.png" alt="img"></a>
-                <form action="https://demo.jsnorm.com/" class="search-form">
-                    <span data-feather="search"></span>
-                    <input class="form-control mr-sm-2 box-shadow-none" type="search" placeholder="Search..."
-                        aria-label="Search">
-                </form>
-                <div class="top-menu">
-
-                    <div class="strikingDash-top-menu position-relative">
-                        <ul>
-                            <li class="has-subMenu">
-                                <a href="#" class="active">Dashboard</a>
-                                <ul class="subMenu">
-                                    <li>
-                                        <a class="" href="index.html">Social Media</a>
-                                    </li>
-                                    <li>
-                                        <a class="" href="business.html">FineTech /
-                                            Business</a>
-                                    </li>
-                                    <li>
-                                        <a class="" href="performance.html">Site
-                                            Performance</a>
-                                    </li>
-                                    <li>
-                                        <a class="" href="ecommerce.html">Ecommerce</a>
-                                    </li>
-                                    <li>
-                                        <a class="active" href="crm.html">
-                                            CRM</a>
-                                    </li>
-                                    <li>
-                                        <a class="" href="sales.html">
-                                            Sales Performance</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-subMenu">
-                                <a href="#" class="">Layouts</a>
-                                <ul class="subMenu">
-                                    <li class="l_sidebar">
-                                        <a href="#" data-layout="light">Light Mode</a>
-                                    </li>
-                                    <li class="l_sidebar">
-                                        <a href="#" data-layout="dark">Dark Mode</a>
-                                    </li>
-                                    <li class="l_navbar">
-                                        <a href="#" data-layout="top">Top Menu</a>
-                                    </li>
-                                    <li class="l_navbar">
-                                        <a href="#" data-layout="side">Side Menu</a>
-                                    </li>
-                                    <li class="layout">
-                                        <a href="https://demo.jsnorm.com/html/strikingdash/strikingdash/rtl">RTL</a>
-                                    </li>
-                                    <li class="layout">
-                                        <a href="https://demo.jsnorm.com/html/strikingdash/strikingdash/ltr">LTR</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-subMenu">
-                                <a href="#" class="">Apps</a>
-                                <ul class="subMenu">
-                                    <li>
-                                        <a href="chat.html" class="">
-                                            <span data-feather="message-square" class="nav-icon"></span>
-                                            <span class="menu-text">Chat</span>
-                                        </a>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="shopping-cart" class="nav-icon"></span>
-                                            <span class="menu-text">eCommerce</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a href="products.html" class="">Products</a>
-                                            </li>
-                                            <li>
-                                                <a href="product-details.html" class="">Product Details</a>
-                                            </li>
-                                            <li>
-                                                <a href="add-product.html" class="">Product
-                                                    Add</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="">Product Edit</a>
-                                            </li>
-                                            <li>
-                                                <a href="cart.html" class="">Cart</a>
-                                            </li>
-                                            <li>
-                                                <a href="order.html" class="">Orders</a>
-                                            </li>
-                                            <li>
-                                                <a href="sellers.html" class="">Sellers</a>
-                                            </li>
-                                            <li>
-                                                <a href="invoice.html" class="">Invoices</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="mail" class="nav-icon"></span>
-                                            <span class="menu-text">Email</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a href="inbox.html" class="">Inbox</a>
-                                            </li>
-                                            <li>
-                                                <a href="read-email.html" class="">Read
-                                                    Email</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="chat.html" class="">
-                                            <span data-feather="bookmark" class="nav-icon"></span>
-                                            <span class="menu-text">Note</span>
-                                        </a>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="user" class="nav-icon"></span>
-                                            <span class="menu-text">Profile</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a href="profile.html" class="">Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="profile-setting.html" class="">Settings</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="user-check" class="nav-icon"></span>
-                                            <span class="menu-text">Contact</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="contact-1.html">Contact 1</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="contact-2.html">Contact 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="chat.html" class="">
-                                            <span data-feather="activity" class="nav-icon"></span>
-                                            <span class="menu-text">To-Do</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="kanban.html" class="">
-                                            <span data-feather="columns" class="nav-icon"></span>
-                                            <span class="menu-text">Kanban Board</span>
-                                        </a>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="repeat" class="nav-icon"></span>
-                                            <span class="menu-text">Import & Export</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="import.html">Import</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="export.html">Export</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="export-selected.html">Export Selected
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="file-manager.html" class="">
-                                            <span data-feather="file" class="nav-icon"></span>
-                                            <span class="menu-text">File Manager</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="task-app.html" class="">
-                                            <span data-feather="clipboard" class="nav-icon"></span>
-                                            <span class="menu-text">Task App</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-
-                            <li class="has-subMenu">
-                                <a href="#" class="">Crud</a>
-                                <ul class="subMenu">
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="shopping-cart" class="nav-icon"></span>
-                                            <span class="menu-text">Firestore Crud</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="firestore.html">View All</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="firestore-add.html">Add
-                                                    New</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li class="mega-item has-subMenu">
-                                <a href="#" class="">Pages</a>
-                                <ul class="megaMenu-wrapper megaMenu-small">
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="projects.html" class="">Project</a>
-                                            </li>
-                                            <li>
-                                                <a href="application-ui.html" class="">Project Details</a>
-                                            </li>
-                                            <li>
-                                                <a href="create.html" class="">Create
-                                                    Project</a>
-                                            </li>
-                                            <li>
-                                                <a href="users-card.html" class="">Team</a>
-                                            </li>
-                                            <li>
-                                                <a href="users-card2.html" class="">Users</a>
-                                            </li>
-                                            <li>
-                                                <a href="user-info.html" class="">Users
-                                                    Info</a>
-                                            </li>
-                                            <li>
-                                                <a href="users-list.html" class="">Users
-                                                    List</a>
-                                            </li>
-                                            <li>
-                                                <a href="users-group.html" class="">Users
-                                                    Group</a>
-                                            </li>
-                                            <li>
-                                                <a href="banner.html" class="">
-                                                    <span class="menu-text">Banners</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="testimonial.html" class="">
-                                                    <span class="menu-text">Testimonial</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="support.html" class="">
-                                                    <span class="menu-text">Support Center</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li>
-                                                <a href="users-datatable.html" class="">Users
-                                                    Table</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery.html" class="">Gallery 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="gallery2.html" class="">Gallery 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="pricing.html" class="">Pricing</a>
-                                            </li>
-                                            <li>
-                                                <a href="faq.html" class="">FAQ's</a>
-                                            </li>
-                                            <li>
-                                                <a href="search.html" class="">Search
-                                                    Results</a>
-                                            </li>
-                                            <li>
-                                                <a href="maintenance.html" class="">Coming
-                                                    Soon</a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html" class="">404</a>
-                                            </li>
-                                            <li>
-                                                <a href="maintenance.html" class="">
-                                                    <span class="menu-text">Maintenance</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="login.html" class="">
-                                                    <span class="menu-text">Log In</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="sign-up.html" class="">
-                                                    <span class="menu-text">Sign Up</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="blank.html" class="">
-                                                    <span class="menu-text">Blank</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="mega-item has-subMenu">
-                                <a href="#" class="">Components</a>
-                                <ul class="megaMenu-wrapper megaMenu-wide">
-                                    <li>
-                                        <span class="mega-title">Components</span>
-                                        <ul>
-                                            <li>
-                                                <a class="" href="alert.html">Alert</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="avatar.html">Avatar</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="badge.html">Badge</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="breadcrumbs.html">Breadcrumb</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="buttons.html">Button</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="cards.html">Cards</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="carousel.html">Carousel</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="checkbox.html">Checkbox</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="collapse.html">Collapse</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="comments.html">Comments</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span class="mega-title">Components</span>
-                                        <ul>
-                                            <li>
-                                                <a class="" href="dashboard-base.html">Dashboard
-                                                    Base</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="date-picker.html">DatePicker</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="drawer.html">Drawer</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="drag-drop.html">Drag &
-                                                    Drop</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="dropdown.html">Dropdown</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="empty.html">Empty</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="input.html">Input</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="list.html">List</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="menu.html">Menu</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="message.html">Message</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span class="mega-title">Components</span>
-                                        <ul>
-                                            <li>
-                                                <a class="" href="modal.html">Modals</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="notifications.html">Notification</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="page-header.html">Page
-                                                    Headers</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="pagination.html">Paginations</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="progressbar.html">Progress</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="radio.html">Radio</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="rate.html">Rate</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="result.html">Result</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="select.html">Select</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="skeleton.html">Skeleton</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="time-picker.html">Timepicker</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <span class="mega-title">Components</span>
-                                        <ul>
-                                            <li>
-                                                <a class="" href="slider.html">Slider</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="spin.html">Spinner</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="statistics.html">Statistic</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="steps.html">Steps</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="switch.html">Switch</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="tab.html">Tabs</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="tag.html">Tags</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="timeline.html">Timeline</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="timeline-2.html">Timeline
-                                                    2</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="timeline-3.html">Timeline
-                                                    3</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="uploads.html">Upload</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="has-subMenu">
-                                <a href="#" class="">Features</a>
-                                <ul class="subMenu">
-                                    <li>
-                                        <a href="editors.html" class="">
-                                            <span data-feather="edit" class="nav-icon"></span>
-                                            <span class="menu-text">Editors</span>
-                                        </a>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="grid" class="nav-icon"></span>
-                                            <span class="menu-text">Icons</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a href="feather.html" class="">Feather icons
-                                                    (svg)</a>
-                                            </li>
-                                            <li>
-                                                <a href="fontawesome.html" class="">Font
-                                                    Awesome</a>
-                                            </li>
-                                            <li>
-                                                <a href="lineawesome.html" class="">Line
-                                                    Awesome</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="bar-chart-2" class="nav-icon"></span>
-                                            <span class="menu-text">Charts</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="charts.html">Chart JS</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="google-chart.html">Google
-                                                    Charts</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="peity-chart.html">Peity
-                                                    Charts</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="disc" class="nav-icon"></span>
-                                            <span class="menu-text">Froms</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="form.html">Basics</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="form-layouts.html">Layouts</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="form-elements.html">Elements</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="form-components.html">Components</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="form-validations.html">Validations</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="map" class="nav-icon"></span>
-                                            <span class="menu-text">Maps</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a href="google-map.html" class="">Google
-                                                    Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="leaflet-map.html" class="">Leaflet
-                                                    Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="vector-map.html" class="">Vector
-                                                    Maps</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="server" class="nav-icon"></span>
-                                            <span class="menu-text">Widget</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="widget-charts.html">Chart</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="widget-mixed.html">Mixed</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="widget-card.html">Card</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="square" class="nav-icon"></span>
-                                            <span class="menu-text">Wizards</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a href="checkout-wizard6.html" class="">Wizard
-                                                    1</a>
-                                            </li>
-                                            <li>
-                                                <a href="checkout-wizard7.html" class="">Wizard
-                                                    2</a>
-                                            </li>
-                                            <li>
-                                                <a href="checkout-wizard8.html" class="">Wizard
-                                                    3</a>
-                                            </li>
-                                            <li>
-                                                <a href="checkout-wizard9.html" class="">Wizard
-                                                    4</a>
-                                            </li>
-                                            <li>
-                                                <a href="checkout-wizard10.html" class="">Wizard
-                                                    5</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-subMenu-left">
-                                        <a href="#" class="">
-                                            <span data-feather="book" class="nav-icon"></span>
-                                            <span class="menu-text">Knowledge Base</span>
-                                        </a>
-                                        <ul class="subMenu">
-                                            <li>
-                                                <a class="" href="knowledgebase.html">Knowledge
-                                                    Base</a>
-                                            </li>
-                                            <li>
-                                                <a class="" href="knowledgebase-2.html">All
-                                                    Article</a>
-                                            </li>
-
-                                            <li>
-                                                <a class="" href="knowledgebase-3.html">Single Article</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-            <!-- ends: navbar-left -->
-
-            <div class="navbar-right">
-                <ul class="navbar-right__menu">
-                    <li class="nav-search d-none">
-                        <a href="#" class="search-toggle">
-                            <i class="la la-search"></i>
-                            <i class="la la-times"></i>
-                        </a>
-                        <form action="https://demo.jsnorm.com/" class="search-form-topMenu">
-                            <span class="search-icon" data-feather="search"></span>
-                            <input class="form-control mr-sm-2 box-shadow-none" type="search"
-                                placeholder="Search..." aria-label="Search">
-                        </form>
-                    </li>
-                    <li class="nav-message">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle">
-                                <span data-feather="mail"></span></a>
-                            <div class="dropdown-wrapper">
-                                <h2 class="dropdown-wrapper__title">Messages <span
-                                        class="badge-circle badge-success ml-1">2</span></h2>
-                                <ul>
-                                    <li class="author-online has-new-message">
-                                        <div class="user-avater">
-                                            <img src="img/team-1.png" alt="">
-                                        </div>
-                                        <div class="user-message">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">Web Design</a>
-                                                <span class="time-posted">3 hrs ago</span>
-                                            </p>
-                                            <p>
-                                                <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                                    dolor amet cosec Lorem ipsum</span>
-                                                <span class="msg-count badge-circle badge-success badge-sm">1</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="author-offline has-new-message">
-                                        <div class="user-avater">
-                                            <img src="img/team-1.png" alt="">
-                                        </div>
-                                        <div class="user-message">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">Web Design</a>
-                                                <span class="time-posted">3 hrs ago</span>
-                                            </p>
-                                            <p>
-                                                <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                                    dolor amet cosec Lorem ipsum</span>
-                                                <span class="msg-count badge-circle badge-success badge-sm">1</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="author-online has-new-message">
-                                        <div class="user-avater">
-                                            <img src="img/team-1.png" alt="">
-                                        </div>
-                                        <div class="user-message">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">Web Design</a>
-                                                <span class="time-posted">3 hrs ago</span>
-                                            </p>
-                                            <p>
-                                                <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                                    dolor amet cosec Lorem ipsum</span>
-                                                <span class="msg-count badge-circle badge-success badge-sm">1</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="author-offline">
-                                        <div class="user-avater">
-                                            <img src="img/team-1.png" alt="">
-                                        </div>
-                                        <div class="user-message">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">Web Design</a>
-                                                <span class="time-posted">3 hrs ago</span>
-                                            </p>
-                                            <p>
-                                                <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                                    dolor amet cosec Lorem ipsum</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="author-offline">
-                                        <div class="user-avater">
-                                            <img src="img/team-1.png" alt="">
-                                        </div>
-                                        <div class="user-message">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">Web Design</a>
-                                                <span class="time-posted">3 hrs ago</span>
-                                            </p>
-                                            <p>
-                                                <span class="desc text-truncate" style="max-width: 215px;">Lorem ipsum
-                                                    dolor amet cosec Lorem ipsum</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <a href="#" class="dropdown-wrapper__more">See All Message</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- ends: nav-message -->
-                    <li class="nav-notification">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle">
-                                <span data-feather="bell"></span></a>
-                            <div class="dropdown-wrapper">
-                                <h2 class="dropdown-wrapper__title">Notifications <span
-                                        class="badge-circle badge-warning ml-1">4</span></h2>
-                                <ul>
-                                    <li
-                                        class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
-                                        <div class="nav-notification__type nav-notification__type--primary">
-                                            <span data-feather="inbox"></span>
-                                        </div>
-                                        <div class="nav-notification__details">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
-                                                <span>sent you a message</span>
-                                            </p>
-                                            <p>
-                                                <span class="time-posted">5 hours ago</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li
-                                        class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
-                                        <div class="nav-notification__type nav-notification__type--secondary">
-                                            <span data-feather="upload"></span>
-                                        </div>
-                                        <div class="nav-notification__details">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
-                                                <span>sent you a message</span>
-                                            </p>
-                                            <p>
-                                                <span class="time-posted">5 hours ago</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li
-                                        class="nav-notification__single nav-notification__single--unread d-flex flex-wrap">
-                                        <div class="nav-notification__type nav-notification__type--success">
-                                            <span data-feather="log-in"></span>
-                                        </div>
-                                        <div class="nav-notification__details">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
-                                                <span>sent you a message</span>
-                                            </p>
-                                            <p>
-                                                <span class="time-posted">5 hours ago</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
-                                        <div class="nav-notification__type nav-notification__type--info">
-                                            <span data-feather="at-sign"></span>
-                                        </div>
-                                        <div class="nav-notification__details">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
-                                                <span>sent you a message</span>
-                                            </p>
-                                            <p>
-                                                <span class="time-posted">5 hours ago</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li class="nav-notification__single nav-notification__single d-flex flex-wrap">
-                                        <div class="nav-notification__type nav-notification__type--danger">
-                                            <span data-feather="heart"></span>
-                                        </div>
-                                        <div class="nav-notification__details">
-                                            <p>
-                                                <a href="#" class="subject stretched-link text-truncate"
-                                                    style="max-width: 180px;">James</a>
-                                                <span>sent you a message</span>
-                                            </p>
-                                            <p>
-                                                <span class="time-posted">5 hours ago</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <a href="#" class="dropdown-wrapper__more">See all incoming activity</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- ends: .nav-notification -->
-                    <li class="nav-settings">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle">
-                                <span data-feather="settings"></span></a>
-                            <div class="dropdown-wrapper dropdown-wrapper--large">
-                                <ul class="list-settings">
-                                    <li class="d-flex">
-                                        <div class="mr-3"><img src="img/mail.png" alt=""></div>
-                                        <div class="flex-grow-1">
-                                            <h6>
-                                                <a href="#" class="stretched-link">All Features</a>
-                                            </h6>
-                                            <p>Introducing Increment subscriptions </p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex">
-                                        <div class="mr-3"><img src="img/color-palette.png" alt=""></div>
-                                        <div class="flex-grow-1">
-                                            <h6>
-                                                <a href="#" class="stretched-link">Themes</a>
-                                            </h6>
-                                            <p>Third party themes that are compatible</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex">
-                                        <div class="mr-3"><img src="img/home.png" alt=""></div>
-                                        <div class="flex-grow-1">
-                                            <h6>
-                                                <a href="#" class="stretched-link">Payments</a>
-                                            </h6>
-                                            <p>We handle billions of dollars</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex">
-                                        <div class="mr-3"><img src="img/video-camera.png" alt=""></div>
-                                        <div class="flex-grow-1">
-                                            <h6>
-                                                <a href="#" class="stretched-link">Design Mockups</a>
-                                            </h6>
-                                            <p>Share planning visuals with clients</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex">
-                                        <div class="mr-3"><img src="img/document.png" alt=""></div>
-                                        <div class="flex-grow-1">
-                                            <h6>
-                                                <a href="#" class="stretched-link">Content Planner</a>
-                                            </h6>
-                                            <p>Centralize content gethering and editing</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex">
-                                        <div class="mr-3"><img src="img/microphone.png" alt=""></div>
-                                        <div class="flex-grow-1">
-                                            <h6>
-                                                <a href="#" class="stretched-link">Diagram Maker</a>
-                                            </h6>
-                                            <p>Plan user flows & test scenarios</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- ends: .nav-settings -->
-                    <li class="nav-support">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle">
-                                <span data-feather="help-circle"></span></a>
-                            <div class="dropdown-wrapper">
-                                <div class="list-group">
-                                    <span>Documentation</span>
-                                    <ul>
-                                        <li>
-                                            <a href="#">How to customize admin</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">How to use</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">The relation of vertical spacing</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="list-group">
-                                    <span>Payments</span>
-                                    <ul>
-                                        <li>
-                                            <a href="#">How to customize admin</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">How to use</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="list-group">
-                                    <span>Content Planner</span>
-                                    <ul>
-                                        <li>
-                                            <a href="#">How to customize admin</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">How to use</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- ends: .nav-support -->
-                    <li class="nav-flag-select">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle"><img src="img/flag.png" alt=""
-                                    class="rounded-circle"></a>
-                            <div class="dropdown-wrapper dropdown-wrapper--small">
-                                <a href="#"><img src="img/eng.png" alt=""> English</a>
-                                <a href="#"><img src="img/ger.png" alt=""> German</a>
-                                <a href="#"><img src="img/spa.png" alt=""> Spanish</a>
-                                <a href="#"><img src="img/tur.png" alt=""> Turkish</a>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- ends: .nav-flag-select -->
-                    <li class="nav-author">
-                        <div class="dropdown-custom">
-                            <a href="javascript:;" class="nav-item-toggle"><img src="img/author-nav.jpg"
-                                    alt="" class="rounded-circle"></a>
-                            <div class="dropdown-wrapper">
-                                <div class="nav-author__info">
-                                    <div class="author-img">
-                                        <img src="img/author-nav.jpg" alt="" class="rounded-circle">
-                                    </div>
-                                    <div>
-                                        <h6>Abdullah Bin Talha</h6>
-                                        <span>UI Designer</span>
-                                    </div>
-                                </div>
-                                <div class="nav-author__options">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <span data-feather="user"></span> Profile</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span data-feather="settings"></span> Settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span data-feather="key"></span> Billing</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span data-feather="users"></span> Activity</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span data-feather="bell"></span> Help</a>
-                                        </li>
-                                    </ul>
-                                    <a href="#" class="nav-author__signout">
-                                        <span data-feather="log-out"></span> Sign Out</a>
-                                </div>
-                            </div>
-                            <!-- ends: .dropdown-wrapper -->
-                        </div>
-                    </li>
-                    <!-- ends: .nav-author -->
-                </ul>
-                <!-- ends: .navbar-right__menu -->
-                <div class="navbar-right__mobileAction d-md-none">
-                    <a href="#" class="btn-search">
-                        <span data-feather="search"></span>
-                        <span data-feather="x"></span></a>
-                    <a href="#" class="btn-author-action">
-                        <span data-feather="more-vertical"></span></a>
-                </div>
-            </div>
-            <!-- ends: .navbar-right -->
-        </nav>
-    </header>
-    <main class="main-content">
-
-        <aside class="sidebar">
-            <div class="sidebar__menu-group">
-                <ul class="sidebar_nav">
-                    <li class="menu-title">
-                        <span>Main menu</span>
-                    </li>
-                    <li class="has-child open">
-                        <a href="#" class="active">
-                            <span data-feather="home" class="nav-icon"></span>
-                            <span class="menu-text">Dashboard</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="index.html">Social Media</a>
-                            </li>
-                            <li>
-                                <a class="" href="business.html">FineTech /
-                                    Business</a>
-                            </li>
-                            <li>
-                                <a class="" href="performance.html">Site
-                                    Performance</a>
-                            </li>
-                            <li>
-                                <a class="" href="ecommerce.html">Ecommerce</a>
-                            </li>
-                            <li>
-                                <a class="active" href="crm.html">
-                                    CRM</a>
-                            </li>
-                            <li>
-                                <a class="" href="sales.html">
-                                    Sales Performance</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="layout" class="nav-icon"></span>
-                            <span class="menu-text">Layouts</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li class="l_sidebar">
-                                <a href="#" data-layout="light">Light Mode</a>
-                            </li>
-                            <li class="l_sidebar">
-                                <a href="#" data-layout="dark">Dark Mode</a>
-                            </li>
-                            <li class="l_navbar">
-                                <a href="#" data-layout="top">Top Menu</a>
-                            </li>
-                            <li class="l_navbar">
-                                <a href="#" data-layout="side">Side Menu</a>
-                            </li>
-                            <li class="layout">
-                                <a href="https://demo.jsnorm.com/html/strikingdash/strikingdash/rtl">RTL</a>
-                            </li>
-                            <li class="layout">
-                                <a href="https://demo.jsnorm.com/html/strikingdash/strikingdash/ltr">LTR</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="changelog.html" class="">
-                            <span data-feather="activity" class="nav-icon"></span>
-                            <span class="menu-text">Changelog</span>
-                            <span class="badge badge-primary menuItem">2.1.3</span>
-                        </a>
-                    </li>
-                    <li class="menu-title m-top-30">
-                        <span>Applications</span>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="mail" class="nav-icon"></span>
-                            <span class="menu-text">Email</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="inbox.html">Inbox</a>
-                            </li>
-                            <li>
-                                <a class="" href="read-email.html">Read
-                                    Email</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="chat.html" class="">
-                            <span data-feather="message-square" class="nav-icon"></span>
-                            <span class="menu-text">Chat</span>
-                        </a>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="shopping-cart" class="nav-icon"></span>
-                            <span class="menu-text">eCommerce</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="products.html" class="">Products</a>
-                            </li>
-                            <li>
-                                <a href="product-details.html" class="">Product Details</a>
-                            </li>
-                            <li>
-                                <a href="add-product.html" class="">Product Add</a>
-                            </li>
-                            <li>
-                                <a href="add-product.html" class="">Product Edit</a>
-                            </li>
-                            <li>
-                                <a href="cart.html" class="">Cart</a>
-                            </li>
-                            <li>
-                                <a href="order.html" class="">Orders</a>
-                            </li>
-                            <li>
-                                <a href="sellers.html" class="">Sellers</a>
-                            </li>
-                            <li>
-                                <a href="invoice.html" class="">Invoices</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="aperture" class="nav-icon"></span>
-                            <span class="menu-text">Social App</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="profile.html" class="">My Profile</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="target" class="nav-icon"></span>
-                            <span class="menu-text">Project</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="projects.html" class="">Project</a>
-                            </li>
-                            <li>
-                                <a href="application-ui.html" class="">Project Details</a>
-                            </li>
-                            <li>
-                                <a href="create.html" class="">Create
-                                    Project</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="calendar.html" class="">
-                            <span data-feather="calendar" class="nav-icon"></span>
-                            <span class="menu-text">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="folder" class="nav-icon"></span>
-                            <span class="menu-text">Users</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="users-membar.html" class="">Team</a>
-                            </li>
-                            <li>
-                                <a href="users-card.html" class="">Users Grid</a>
-                            </li>
-                            <li>
-                                <a href="users-list.html" class="">Users List</a>
-                            </li>
-                            <li>
-                                <a href="users-card2.html" class="">Users Grid style</a>
-                            </li>
-                            <li>
-                                <a href="users-group.html" class="">Users
-                                    Group</a>
-                            </li>
-                            <li>
-                                <a href="user-info.html" class=""><span
-                                        class="badge badge-success menuItem">New</span>Add User</a>
-                            </li>
-                            <li>
-                                <a href="users-datatable.html" class="">Users
-                                    Table</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="user-check" class="nav-icon"></span>
-                            <span class="menu-text">Contact</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="contact-2.html">Contact Grid</a>
-                            </li>
-                            <li>
-                                <a class="" href="contact-1.html">Contact List</a>
-                            </li>
-                            <li>
-                                <a class="" href="contact-3.html">Contact Create</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="note.html" class="">
-                            <span data-feather="file-text" class="nav-icon"></span>
-                            <span class="menu-text">Note</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="to-do.html" class="">
-                            <span data-feather="check-square" class="nav-icon"></span>
-                            <span class="menu-text">To-Do</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="kanban.html" class="">
-                            <span data-feather="columns" class="nav-icon"></span>
-                            <span class="menu-text">Kanban Board</span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="repeat" class="nav-icon"></span>
-                            <span class="menu-text">Import & Export</span>
-                            <span class="toggle-icon"></span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="import.html">Import</a>
-                            </li>
-                            <li>
-                                <a class="" href="export.html">Export</a>
-                            </li>
-                            <li>
-                                <a class="" href="export-selected.html">Export Selected
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="file-manager.html" class="">
-                            <span data-feather="file" class="nav-icon"></span>
-                            <span class="menu-text">File Manager</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="task-app.html" class="">
-                            <span data-feather="clipboard" class="nav-icon"></span>
-                            <span class="menu-text">Task App</span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="bookmarks.html" class="">
-                            <span data-feather="bookmark" class="nav-icon"></span>
-                            <span class="menu-text">Bookmarks<span
-                                    class="badge badge-success menuItem">New</span></span>
-                        </a>
-                    </li>
-                    <li class="menu-title m-top-30">
-                        <span>CRUD</span>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="database" class="nav-icon"></span>
-                            <span class="menu-text">Firestore Crud</span>
-                            <span class="toggle-icon"></span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="firestore.html">View All</a>
-                            </li>
-                            <li>
-                                <a class="" href="firestore-add.html">Add New</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-title m-top-30">
-                        <span>Features</span>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="layers" class="nav-icon"></span>
-                            <span class="menu-text">UI Elements</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="alert.html">Alert</a>
-                            </li>
-                            <li>
-                                <a class="" href="avatar.html">Avatar</a>
-                            </li>
-                            <li>
-                                <a class="" href="badge.html">Badge</a>
-                            </li>
-                            <li>
-                                <a class="" href="breadcrumbs.html">Breadcrumb</a>
-                            </li>
-                            <li>
-                                <a class="" href="buttons.html">Button</a>
-                            </li>
-                            <li>
-                                <a class="" href="cards.html">Cards</a>
-                            </li>
-                            <li>
-                                <a class="" href="carousel.html">Carousel</a>
-                            </li>
-                            <li>
-                                <a class="" href="checkbox.html">Checkbox</a>
-                            </li>
-                            <li>
-                                <a class="" href="collapse.html">Collapse</a>
-                            </li>
-                            <li>
-                                <a class="" href="comments.html">Comments</a>
-                            </li>
-                            <li>
-                                <a class="" href="dashboard-base.html">Dashboard
-                                    Base</a>
-                            </li>
-                            <li>
-                                <a class="" href="date-picker.html">DatePicker</a>
-                            </li>
-                            <li>
-                                <a class="" href="drawer.html">Drawer</a>
-                            </li>
-                            <li>
-                                <a class="" href="drag-drop.html">Drag & Drop</a>
-                            </li>
-                            <li>
-                                <a class="" href="dropdown.html">Dropdown</a>
-                            </li>
-                            <li>
-                                <a class="" href="empty.html">Empty</a>
-                            </li>
-                            <li>
-                                <a class="" href="grid.html"><span
-                                        class="badge badge-success menuItem">New</span>Grid</a>
-                            </li>
-                            <li>
-                                <a class="" href="input.html">Input</a>
-                            </li>
-                            <li>
-                                <a class="" href="list.html">List</a>
-                            </li>
-                            <li>
-                                <a class="" href="menu.html">Menu</a>
-                            </li>
-                            <li>
-                                <a class="" href="message.html">Message</a>
-                            </li>
-                            <li>
-                                <a class="" href="modal.html">Modals</a>
-                            </li>
-                            <li>
-                                <a class="" href="notifications.html">Notification</a>
-                            </li>
-                            <li>
-                                <a class="" href="page-header.html">Page
-                                    Headers</a>
-                            </li>
-                            <li>
-                                <a class="" href="pagination.html">Paginations</a>
-                            </li>
-                            <li>
-                                <a class="" href="progressbar.html">Progress</a>
-                            </li>
-                            <li>
-                                <a class="" href="radio.html">Radio</a>
-                            </li>
-                            <li>
-                                <a class="" href="rate.html">Rate</a>
-                            </li>
-                            <li>
-                                <a class="" href="result.html">Result</a>
-                            </li>
-                            <li>
-                                <a class="" href="select.html">Select</a>
-                            </li>
-                            <li>
-                                <a class="" href="skeleton.html">Skeleton</a>
-                            </li>
-                            <li>
-                                <a class="" href="slider.html">Slider</a>
-                            </li>
-                            <li>
-                                <a class="" href="spin.html">Spinner</a>
-                            </li>
-                            <li>
-                                <a class="" href="statistics.html">Statistic</a>
-                            </li>
-                            <li>
-                                <a class="" href="steps.html">Steps</a>
-                            </li>
-                            <li>
-                                <a class="" href="switch.html">Switch</a>
-                            </li>
-                            <li>
-                                <a class="" href="tab.html">Tabs</a>
-                            </li>
-                            <li>
-                                <a class="" href="tag.html">Tags</a>
-                            </li>
-                            <li>
-                                <a class="" href="timeline.html">Timeline</a>
-                            </li>
-                            <li>
-                                <a class="" href="timeline-2.html">Timeline 2</a>
-                            </li>
-                            <li>
-                                <a class="" href="timeline-3.html">Timeline 3</a>
-                            </li>
-                            <li>
-                                <a class="" href="time-picker.html">Timepicker</a>
-                            </li>
-                            <li>
-                                <a class="" href="uploads.html">Upload</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="bar-chart-2" class="nav-icon"></span>
-                            <span class="menu-text">Charts</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="charts.html">Chart JS</a>
-                            </li>
-                            <li>
-                                <a class="" href="google-chart.html">Google
-                                    Charts</a>
-                            </li>
-                            <li>
-                                <a class="" href="peity-chart.html">Peity
-                                    Charts</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="disc" class="nav-icon"></span>
-                            <span class="menu-text">Froms</span>
-                            <span class="toggle-icon"></span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="form.html">Basics</a>
-                            </li>
-                            <li>
-                                <a class="" href="form-layouts.html">Layouts</a>
-                            </li>
-                            <li>
-                                <a class="" href="form-elements.html">Elements</a>
-                            </li>
-                            <li>
-                                <a class="" href="form-components.html">Components</a>
-                            </li>
-                            <li>
-                                <a class="" href="form-validations.html">Validations</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="cpu" class="nav-icon"></span>
-                            <span class="menu-text">Table</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="basic-table.html" class="">Basic
-                                    Table</a>
-                            </li>
-                            <li>
-                                <a href="datatable.html" class="">Data Table</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="server" class="nav-icon"></span>
-                            <span class="menu-text">Widget</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="widget-charts.html">Chart</a>
-                            </li>
-                            <li>
-                                <a class="" href="widget-mixed.html">Mixed</a>
-                            </li>
-                            <li>
-                                <a class="" href="widget-card.html">Card</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="square" class="nav-icon"></span>
-                            <span class="menu-text">Wizards</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="checkout-wizard6.html" class="">Wizard 1</a>
-                            </li>
-                            <li>
-                                <a href="checkout-wizard7.html" class="">Wizard 2</a>
-                            </li>
-                            <li>
-                                <a href="checkout-wizard8.html" class="">Wizard 3</a>
-                            </li>
-                            <li>
-                                <a href="checkout-wizard9.html" class="">Wizard 4</a>
-                            </li>
-                            <li>
-                                <a href="checkout-wizard10.html" class="">Wizard
-                                    5</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="grid" class="nav-icon"></span>
-                            <span class="menu-text">Icons</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="feather.html" class="">Feather icons
-                                    (svg)</a>
-                            </li>
-                            <li>
-                                <a href="fontawesome.html" class="">Font
-                                    Awesome</a>
-                            </li>
-                            <li>
-                                <a href="lineawesome.html" class="">Line
-                                    Awesome</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="editors.html" class="">
-                            <span data-feather="edit" class="nav-icon"></span>
-                            <span class="menu-text">Editors</span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="map" class="nav-icon"></span>
-                            <span class="menu-text">Maps</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="google-map.html" class="">Google Maps</a>
-                            </li>
-                            <li>
-                                <a href="leaflet-map.html" class="">Leaflet
-                                    Maps</a>
-                            </li>
-                            <li>
-                                <a href="vector-map.html" class="">Vector Maps</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-title m-top-30">
-                        <span>Pages</span>
-                    </li>
-                    <li>
-                        <a href="profile-setting.html" class="">
-                            <span data-feather="settings" class="nav-icon"></span>
-                            <span class="menu-text">Settings</span>
-                        </a>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="image" class="nav-icon"></span>
-                            <span class="menu-text">Gallery</span>
-                            <span class="toggle-icon"></span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="gallery.html" class="">Gallery 1</a>
-                            </li>
-                            <li>
-                                <a href="gallery2.html" class="">Gallery 2<span
-                                        class="badge badge-success menuItem">New</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="pricing.html" class="">
-                            <span data-feather="dollar-sign" class="nav-icon"></span>
-                            <span class="menu-text">Pricing</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="banner.html" class="">
-                            <span data-feather="cast" class="nav-icon"></span>
-                            <span class="menu-text">Banners</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="testimonial.html" class="">
-                            <span data-feather="book-open" class="nav-icon"></span>
-                            <span class="menu-text">Testimonial</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="faq.html" class="">
-                            <span data-feather="help-circle" class="nav-icon"></span>
-                            <span class="menu-text">FAQ's</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="search.html" class="">
-                            <span data-feather="search" class="nav-icon"></span>
-                            <span class="menu-text">Search Results</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="blank.html" class="">
-                            <span data-feather="circle" class="nav-icon"></span>
-                            <span class="menu-text">Blank Page</span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                    </li>
-                    <li class="has-child">
-                        <a href="#" class="">
-                            <span data-feather="book" class="nav-icon"></span>
-                            <span class="menu-text">Knowledge Base</span>
-                            <span class="toggle-icon"></span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a class="" href="knowledgebase.html">Knowledge
-                                    Base</a>
-                            </li>
-                            <li>
-                                <a class="" href="knowledgebase-2.html">All
-                                    Article</a>
-                            </li>
-
-                            <li>
-                                <a class="" href="knowledgebase-3.html">Single Article</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="support.html" class="">
-                            <span data-feather="headphones" class="nav-icon"></span>
-                            <span class="menu-text">Support Center</span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="dynamic-table.html" class="">
-                            <span data-feather="database" class="nav-icon"></span>
-                            <span class="menu-text">Dynamic Table</span>
-                            <span class="badge badge-success menuItem">New</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maintenance.html" class="">
-                            <span data-feather="airplay" class="nav-icon"></span>
-                            <span class="menu-text">Maintenance</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="">
-                            <span data-feather="alert-circle" class="nav-icon"></span>
-                            <span class="menu-text">404</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="coming-soon.html" class="">
-                            <span data-feather="clock" class="nav-icon"></span>
-                            <span class="menu-text">Coming Soon</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="login.html" class="">
-                            <span data-feather="user" class="nav-icon"></span>
-                            <span class="menu-text">Log In</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="sign-up.html" class="">
-                            <span data-feather="user-plus" class="nav-icon"></span>
-                            <span class="menu-text">Sign Up</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
-        <div class="contents">
-
-            <div class="crm">
-                <div class="container-fluid">
-                    <div class="row ">
-                        <div class="col-lg-12">
-
-                            <div class="breadcrumb-main">
-                                <h4 class="text-capitalize breadcrumb-title">CRM</h4>
-                                <div class="breadcrumb-action justify-content-center flex-wrap">
-                                    <div class="action-btn">
-
-                                        <div class="form-group mb-0">
-                                            <div class="input-container icon-left position-relative">
-                                                <span class="input-icon icon-left">
-                                                    <span data-feather="calendar"></span>
-                                                </span>
-                                                <input type="text"
-                                                    class="form-control form-control-default date-ranger"
-                                                    name="date-ranger" placeholder="Oct 30, 2019 - Nov 30, 2019">
-                                                <span class="input-icon icon-right">
-                                                    <span data-feather="chevron-down"></span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown action-btn">
-                                        <button class="btn btn-sm btn-default btn-white dropdown-toggle"
-                                            type="button" id="dropdownMenu2" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            <i class="la la-download"></i> Export
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                            <span class="dropdown-item">Export With</span>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-print"></i> Printer</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-file-pdf"></i> PDF</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-file-text"></i> Google Sheets</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-file-excel"></i> Excel (XLSX)</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-file-csv"></i> CSV</a>
-                                        </div>
-                                    </div>
-                                    <div class="dropdown action-btn">
-                                        <button class="btn btn-sm btn-default btn-white dropdown-toggle"
-                                            type="button" id="dropdownMenu3" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            <i class="la la-share"></i> Share
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                                            <span class="dropdown-item">Share Link</span>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-facebook"></i> Facebook</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-twitter"></i> Twitter</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-google"></i> Google</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-feed"></i> Feed</a>
-                                            <a href="#" class="dropdown-item">
-                                                <i class="la la-instagram"></i> Instagram</a>
-                                        </div>
-                                    </div>
-                                    <div class="action-btn">
-                                        <a href="#" class="btn btn-sm btn-primary btn-add">
-                                            <i class="la la-plus"></i> Add New</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-xxl-3 col-sm-6  col-ssm-12 mb-30">
-                            <!-- Card 2 End  -->
-                            <div
-                                class="ap-po-details ap-po-details--2 p-25 radius-xl bg-white d-flex justify-content-between">
-                                <div>
-
-
-
-
-
-                                    <div class="overview-content">
-                                        <h1>7,461</h1>
-                                        <p>New Contact</p>
-                                        <div class="ap-po-details-time">
-                                            <span class="color-success"><i class="las la-arrow-up"></i>
-                                                <strong>25%</strong></span>
-                                            <small>Since last week</small>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="ap-po-timeChart">
-                                    <div class="overview-single__chart d-md-flex align-items-end">
-                                        <div class="parentContainer">
-
-
-                                            <div>
-                                                <canvas id="mychart12"></canvas>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 2 End  -->
-                        </div>
-                        <div class="col-xxl-3 col-sm-6  col-ssm-12 mb-30">
-                            <!-- Card 1 -->
-                            <div
-                                class="ap-po-details ap-po-details--2 p-25 radius-xl bg-white d-flex justify-content-between">
-                                <div>
-
-
-
-
-
-                                    <div class="overview-content">
-                                        <h1>3,254</h1>
-                                        <p>New Deals</p>
-                                        <div class="ap-po-details-time">
-                                            <span class="color-success"><i class="las la-arrow-up"></i>
-                                                <strong>25%</strong></span>
-                                            <small>Since last week</small>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="ap-po-timeChart">
-                                    <div class="overview-single__chart d-md-flex align-items-end">
-                                        <div class="parentContainer">
-
-
-                                            <div>
-                                                <canvas id="mychart13"></canvas>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 1 End -->
-                        </div>
-                        <div class="col-xxl-3 col-sm-6  col-ssm-12 mb-30">
-                            <!-- Card 3 -->
-                            <div
-                                class="ap-po-details ap-po-details--2 p-25 radius-xl bg-white d-flex justify-content-between">
-                                <div>
-
-
-
-
-
-                                    <div class="overview-content">
-                                        <h1>541</h1>
-                                        <p>New Leads</p>
-                                        <div class="ap-po-details-time">
-                                            <span class="color-danger"><i class="las la-arrow-down"></i>
-                                                <strong>8.2%</strong></span>
-                                            <small>Since last week</small>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="ap-po-timeChart">
-                                    <div class="overview-single__chart d-md-flex align-items-end">
-                                        <div class="parentContainer">
-
-
-                                            <div>
-                                                <canvas id="mychart14"></canvas>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 End -->
-                        </div>
-                        <div class="col-xxl-3 col-sm-6  col-ssm-12 mb-30">
-                            <!-- Card 1 -->
-                            <div
-                                class="ap-po-details ap-po-details--2 p-25 radius-xl bg-white d-flex justify-content-between">
-                                <div>
-
-
-
-
-
-                                    <div class="overview-content">
-                                        <h1>$45.2k</h1>
-                                        <p>Revenue</p>
-                                        <div class="ap-po-details-time">
-                                            <span class="color-success"><i class="las la-arrow-up"></i>
-                                                <strong>12.3%</strong></span>
-                                            <small>Since last week</small>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="ap-po-timeChart">
-                                    <div class="overview-single__chart d-md-flex align-items-end">
-                                        <div class="parentContainer">
-
-
-                                            <div>
-                                                <canvas id="mychart15"></canvas>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 1 End -->
-                        </div>
-                        <div class="col-xl-7 col-md-6 mb-30">
-
-                            <div class="card revenueChartTwo broder-0">
-                                <div class="card-header">
-                                    <h6>Revenue</h6>
-                                    <div class="card-extra">
-                                        <ul class="card-tab-links mr-3 nav-tabs nav" role="tablist">
-                                            <li>
-                                                <a class="active" href="#tl_revenue-today" data-toggle="tab"
-                                                    id="tl_revenue-today-tab" role="tab"
-                                                    aria-selected="false">Today</a>
-                                            </li>
-                                            <li>
-                                                <a href="#tl_revenue-week" data-toggle="tab"
-                                                    id="tl_revenue-week-tab" role="tab"
-                                                    aria-selected="false">Week</a>
-                                            </li>
-                                            <li>
-                                                <a href="#tl_revenue-month" data-toggle="tab"
-                                                    id="tl_revenue-month-tab" role="tab"
-                                                    aria-selected="false">Month</a>
-                                            </li>
-                                            <li>
-                                                <a href="#tl_revenue-year" data-toggle="tab"
-                                                    id="tl_revenue-year-tab" role="tab"
-                                                    aria-selected="true">Year</a>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown dropleft">
-                                            <a href="#" role="button" id="revenue3"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <span data-feather="more-horizontal"></span>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="revenue3">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ends: .card-header -->
-                                <div class="card-body pt-0">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade active show" id="tl_revenue-today"
-                                            role="tabpanel" aria-labelledby="tl_revenue-today-tab">
-                                            <div class="revenue-labels">
-                                                <div class="current">
-                                                    <strong class="text-third">$72,784</strong>
-                                                    <span>Current Period</span>
-                                                </div>
-                                                <div>
-                                                    <strong>$52,240</strong>
-                                                    <span>Previous Period</span>
-                                                </div>
-                                            </div>
-                                            <!-- ends: .performance-stats -->
-
-                                            <div class="wp-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="myChart6TExtra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tl_revenue-week" role="tabpanel"
-                                            aria-labelledby="tl_revenue-week-tab">
-                                            <div class="revenue-labels">
-                                                <div class="current">
-                                                    <strong class="text-third">$72,848</strong>
-                                                    <span>Current Period</span>
-                                                </div>
-                                                <div>
-                                                    <strong>$52,458</strong>
-                                                    <span>Previous Period</span>
-                                                </div>
-                                            </div>
-                                            <!-- ends: .performance-stats -->
-
-                                            <div class="wp-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="myChart6WExtra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tl_revenue-month" role="tabpanel"
-                                            aria-labelledby="tl_revenue-month-tab">
-                                            <div class="revenue-labels">
-                                                <div class="current">
-                                                    <strong class="text-third">$72,848</strong>
-                                                    <span>Current Period</span>
-                                                </div>
-                                                <div>
-                                                    <strong>$52,458</strong>
-                                                    <span>Previous Period</span>
-                                                </div>
-                                            </div>
-                                            <!-- ends: .performance-stats -->
-
-                                            <div class="wp-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="myChart6MExtra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="tl_revenue-year" role="tabpanel"
-                                            aria-labelledby="tl_revenue-year-tab">
-                                            <div class="revenue-labels">
-                                                <div class="current">
-                                                    <strong class="text-third">$72,848</strong>
-                                                    <span>Current Period</span>
-                                                </div>
-                                                <div>
-                                                    <strong>$52,458</strong>
-                                                    <span>Previous Period</span>
-                                                </div>
-                                            </div>
-                                            <!-- ends: .performance-stats -->
-
-                                            <div class="wp-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="myChart6Extra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ends: .card-body -->
-                            </div>
-
-                        </div>
-                        <div class="col-xl-5 col-md-6 mb-30">
-
-                            <div class="card broder-0 cashflowChart2">
-                                <div class="card-header">
-                                    <h6>
-                                        Closed Deals Performance
-                                    </h6>
-                                    <div class="card-extra">
-                                        <ul class="card-tab-links mr-3 nav-tabs nav" role="tablist">
-                                            <li>
-                                                <a class="active" href="#t_revenue-week" data-toggle="tab"
-                                                    id="t_revenue-week-tab" role="tab"
-                                                    aria-selected="true">Week</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_revenue-month" data-toggle="tab"
-                                                    id="t_revenue-month-tab" role="tab"
-                                                    aria-selected="false">Month</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_revenue-year" data-toggle="tab"
-                                                    id="t_revenue-year-tab" role="tab"
-                                                    aria-selected="false">Year</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- ends: .card-header -->
-                                <div class="card-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade active show" id="t_revenue-week" role="tabpanel"
-                                            aria-labelledby="t_revenue-week-tab">
-                                            <div class="cashflow-display d-flex">
-                                                <!-- ends: .cashflow-display__single -->
-                                                <div class="cashflow-display__single">
-                                                    <span class="cashflow-display__title">Won</span>
-                                                    <h2 class="cashflow-display__amount">50.8<span
-                                                            class="color-danger fs-14 fw-600 mr-10"><i
-                                                                class="las la-arrow-down"></i>
-                                                            <strong>12%</strong></span></h2>
-                                                </div>
-                                                <!-- ends: .cashflow-display__single -->
-                                                <div class="cashflow-display__single">
-                                                    <span class="cashflow-display__title">Amount</span>
-                                                    <h2 class="cashflow-display__amount">$28k<span
-                                                            class="color-success fs-14 fw-600 mr-10"><i
-                                                                class="las la-arrow-up"></i>
-                                                            <strong>15%</strong></span></h2>
-                                                </div>
-                                                <!-- ends: .cashflow-display__single -->
-                                            </div>
-
-                                            <div class="cashflow-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="barChartCashflow_Wextra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                                <ul class="legend-static ml-2">
-                                                    <li class="custom-label">
-                                                        <span class="bg-success"></span>Won
-                                                    </li>
-                                                    <li class="custom-label">
-                                                        <span class="bg-primary"></span>Amount
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_revenue-month" role="tabpanel"
-                                            aria-labelledby="t_revenue-month-tab">
-                                            <div class="cashflow-display d-flex">
-                                                <!-- ends: .cashflow-display__single -->
-                                                <div class="cashflow-display__single">
-                                                    <span class="cashflow-display__title">Won</span>
-                                                    <h2 class="cashflow-display__amount">$74,240</h2>
-                                                </div>
-                                                <!-- ends: .cashflow-display__single -->
-                                                <div class="cashflow-display__single">
-                                                    <span class="cashflow-display__title">Amount</span>
-                                                    <h2 class="cashflow-display__amount">$22,470</h2>
-                                                </div>
-                                                <!-- ends: .cashflow-display__single -->
-                                            </div>
-
-                                            <div class="cashflow-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="barChartCashflow_Mextra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                                <ul class="legend-static ml-2">
-                                                    <li class="custom-label">
-                                                        <span class="bg-success"></span>Won
-                                                    </li>
-                                                    <li class="custom-label">
-                                                        <span class="bg-primary"></span>Amount
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_revenue-year" role="tabpanel"
-                                            aria-labelledby="t_revenue-year-tab">
-                                            <div class="cashflow-display d-flex">
-                                                <!-- ends: .cashflow-display__single -->
-                                                <div class="cashflow-display__single">
-                                                    <span class="cashflow-display__title">Won</span>
-                                                    <h2 class="cashflow-display__amount">50.8</h2>
-                                                </div>
-                                                <!-- ends: .cashflow-display__single -->
-                                                <div class="cashflow-display__single">
-                                                    <span class="cashflow-display__title">Amount</span>
-                                                    <h2 class="cashflow-display__amount">$28k</h2>
-                                                </div>
-                                                <!-- ends: .cashflow-display__single -->
-                                            </div>
-
-                                            <div class="cashflow-chart">
-                                                <div class="parentContainer">
-
-
-                                                    <div>
-                                                        <canvas id="barChartCashflowExtra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                                <ul class="legend-static ml-2">
-                                                    <li class="custom-label">
-                                                        <span class="bg-success"></span>Won
-                                                    </li>
-                                                    <li class="custom-label">
-                                                        <span class="bg-primary"></span>Amount
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ends: .card-body -->
-                            </div>
-
-                        </div>
-                        <div class="col-xxl-4 col-md-6 mb-30">
-                            <div class="revenue-device-chart">
-
-                                <div class="card broder-0">
-                                    <div class="card-header">
-                                        <h6>Email Sent</h6>
-                                        <div class="card-extra">
-                                            <ul class="card-tab-links nav-tabs nav mr-3" role="tablist">
-                                                <li>
-                                                    <a class="active" href="#rb_device-today" data-toggle="tab"
-                                                        id="rb_device-today-tab" role="tab"
-                                                        aria-selected="true">Today</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#rb_device-week" data-toggle="tab"
-                                                        id="rb_device-week-tab" role="tab"
-                                                        aria-selected="false">Week</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#rb_device-month" data-toggle="tab"
-                                                        id="rb_device-month-tab" role="tab"
-                                                        aria-selected="false">Month</a>
-                                                </li>
-                                            </ul>
-                                            <div class="dropdown dropleft">
-                                                <a href="#" role="button" id="performance"
-                                                    data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    <span data-feather="more-horizontal"></span>
-                                                </a>
-                                                <div class="dropdown-menu" aria-labelledby="performance">
-                                                    <a class="dropdown-item" href="#">Action</a>
-                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- ends: .card-header -->
-                                    <div class="card-body">
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade active show" id="rb_device-today"
-                                                role="tabpanel" aria-labelledby="rb_device-today-tab">
-                                                <div class="revenue-pieChart-wrap">
-
-
-                                                    <div>
-                                                        <canvas id="chartDoughnut3Extra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="revenue-chart-box-list">
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-success">
-                                                            <img class="svg" src="img/svg/sent.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                4450
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Total Sent
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-primary">
-                                                            <img class="svg" src="img/svg/opened.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                5864
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Open
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-warning">
-                                                            <img class="svg" src="img/svg/not-open.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                2450
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Not Open
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ends: .revenue-chart-legend -->
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="rb_device-week" role="tabpanel"
-                                                aria-labelledby="rb_device-week-tab">
-                                                <div class="revenue-pieChart-wrap">
-
-
-                                                    <div>
-                                                        <canvas id="chartDoughnut3WExtra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="revenue-chart-box-list">
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-success">
-                                                            <img class="svg" src="img/svg/sent.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                4450
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Total Sent
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-primary">
-                                                            <img class="svg" src="img/svg/opened.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                5864
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Open
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-warning">
-                                                            <img class="svg" src="img/svg/not-open.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                2450
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Not Open
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ends: .revenue-chart-legend -->
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade" id="rb_device-month" role="tabpanel"
-                                                aria-labelledby="rb_device-month-tab">
-                                                <div class="revenue-pieChart-wrap">
-
-
-                                                    <div>
-                                                        <canvas id="chartDoughnut3MExtra"></canvas>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="revenue-chart-box-list">
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-success">
-                                                            <img class="svg" src="img/svg/sent.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                4450
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Total Sent
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-primary">
-                                                            <img class="svg" src="img/svg/opened.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                5864
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Open
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="revenue-chart-box d-flex flex-wrap align-items-center">
-                                                        <div class="revenue-chart-box__Icon order-bg-opacity-warning">
-                                                            <img class="svg" src="img/svg/not-open.svg"
-                                                                alt="">
-                                                        </div>
-                                                        <div class="my-10">
-                                                            <div class="revenue-chart-box__data">
-                                                                2450
-                                                            </div>
-                                                            <div class="revenue-chart-box__label">
-                                                                Not Open
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- ends: .revenue-chart-legend -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- ends: .card-body -->
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-xxl-4 col-md-6 mb-30">
-
-                            <div class="card border-0">
-                                <div class="card-header">
-                                    <h6>Sales Leaderboard</h6>
-                                    <div class="card-extra">
-                                        <ul class="card-tab-links mr-3 nav-tabs nav" role="tablist">
-                                            <li>
-                                                <a class="active" href="#t_selling-today" data-toggle="tab"
-                                                    id="t_selling-today-tab" role="tab"
-                                                    aria-selected="true">Today</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_selling-week" data-toggle="tab"
-                                                    id="t_selling-week-tab" role="tab"
-                                                    aria-selected="true">Week</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_selling-month" data-toggle="tab"
-                                                    id="t_selling-month-tab" role="tab"
-                                                    aria-selected="true">Month</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_selling-year" data-toggle="tab"
-                                                    id="t_selling-year-tab" role="tab"
-                                                    aria-selected="true">Year</a>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown dropleft">
-                                            <a href="#" role="button" id="todo11"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <span data-feather="more-horizontal"></span>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="todo11">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade active show" id="t_selling-today"
-                                            role="tabpanel" aria-labelledby="t_selling-today-tab">
-                                            <div class="leader-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Prducts Name</th>
-                                                                <th>Deals</th>
-                                                                <th>Amount</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Samsung Galaxy S8 256GB</td>
-                                                                <td>339</td>
-                                                                <td>$60,258</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Half Sleeve Shirt</td>
-
-                                                                <td>136</td>
-                                                                <td>$2,483</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Marco Shoes</td>
-
-                                                                <td>448</td>
-                                                                <td>$19,758</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>15" Mackbook Pro</td>
-                                                                <td>159</td>
-                                                                <td>$197,458</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Apple iPhone X</td>
-                                                                <td>146</td>
-                                                                <td>115,254</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_selling-week" role="tabpanel"
-                                            aria-labelledby="t_selling-week-tab">
-                                            <div class="selling-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Prducts Name</th>
-                                                                <th>Deals</th>
-                                                                <th>Amount</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Samsung Galaxy S8 256GB</td>
-                                                                <td>339</td>
-                                                                <td>$60,258</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Half Sleeve Shirt</td>
-
-                                                                <td>136</td>
-                                                                <td>$2,483</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Marco Shoes</td>
-
-                                                                <td>448</td>
-                                                                <td>$19,758</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>15" Mackbook Pro</td>
-                                                                <td>159</td>
-                                                                <td>$197,458</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Apple iPhone X</td>
-                                                                <td>146</td>
-                                                                <td>115,254</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_selling-month" role="tabpanel"
-                                            aria-labelledby="t_selling-month-tab">
-                                            <div class="selling-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Prducts Name</th>
-                                                                <th>Deals</th>
-                                                                <th>Amount</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Samsung Galaxy S8 256GB</td>
-                                                                <td>339</td>
-                                                                <td>$60,258</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Half Sleeve Shirt</td>
-
-                                                                <td>136</td>
-                                                                <td>$2,483</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Marco Shoes</td>
-
-                                                                <td>448</td>
-                                                                <td>$19,758</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>15" Mackbook Pro</td>
-                                                                <td>159</td>
-                                                                <td>$197,458</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Apple iPhone X</td>
-                                                                <td>146</td>
-                                                                <td>115,254</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_selling-year" role="tabpanel"
-                                            aria-labelledby="t_selling-year-tab">
-                                            <div class="selling-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Prducts Name</th>
-                                                                <th>Deals</th>
-                                                                <th>Amount</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Samsung Galaxy S8 256GB</td>
-                                                                <td>339</td>
-                                                                <td>$60,258</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Half Sleeve Shirt</td>
-
-                                                                <td>136</td>
-                                                                <td>$2,483</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Marco Shoes</td>
-
-                                                                <td>448</td>
-                                                                <td>$19,758</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>15" Mackbook Pro</td>
-                                                                <td>159</td>
-                                                                <td>$197,458</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Apple iPhone X</td>
-                                                                <td>146</td>
-                                                                <td>115,254</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-xxl-4 col-md-6 mb-30">
-
-                            <div class="card border-0">
-                                <div class="card-header">
-                                    <h6>todo2</h6>
-                                    <div class="card-extra">
-                                        <ul class="card-tab-links mr-3 nav-tabs nav" role="tablist">
-                                            <li>
-                                                <a class="active" href="#t_deals-today" data-toggle="tab"
-                                                    id="t_deals-today-tab" role="tab"
-                                                    aria-selected="true">Today</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_deals-week" data-toggle="tab" id="t_deals-week-tab"
-                                                    role="tab" aria-selected="true">Week</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_deals-month" data-toggle="tab" id="t_deals-month-tab"
-                                                    role="tab" aria-selected="true">Month</a>
-                                            </li>
-                                            <li>
-                                                <a href="#t_deals-year" data-toggle="tab" id="t_deals-year-tab"
-                                                    role="tab" aria-selected="true">Year</a>
-                                            </li>
-                                        </ul>
-                                        <div class="dropdown dropleft">
-                                            <a href="#" role="button" id="todo"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <span data-feather="more-horizontal"></span>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="todo">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade active show" id="t_deals-today" role="tabpanel"
-                                            aria-labelledby="t_deals-today-tab">
-                                            <div class="deals-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Ahmad Musa
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/2.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                John Mark
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/3.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                David Miller
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/4.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Chris Lein
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Robert Philips
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_deals-week" role="tabpanel"
-                                            aria-labelledby="t_deals-week-tab">
-                                            <div class="deals-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Ahmad Musa
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/2.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                John Mark
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/3.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                David Miller
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/4.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Chris Lein
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Robert Philips
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_deals-month" role="tabpanel"
-                                            aria-labelledby="t_deals-month-tab">
-                                            <div class="deals-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Ahmad Musa
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/2.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                John Mark
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/3.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                David Miller
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/4.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Chris Lein
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Robert Philips
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="t_deals-year" role="tabpanel"
-                                            aria-labelledby="t_deals-year-tab">
-                                            <div class="deals-table-wrap">
-                                                <div class="table-responsive">
-                                                    <table class="table table--default">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Ahmad Musa
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/2.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                John Mark
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/3.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                David Miller
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/4.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Chris Lein
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="table-selling-content">
-                                                                        <img src="img/author/1.jpg" alt="img">
-                                                                        <div>
-                                                                            <div class="title">
-                                                                                Robert Philips
-                                                                            </div>
-                                                                            <span>20 June 2020</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>$38,536.00</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <!-- ends: .row -->
-                </div>
-            </div>
-
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="{{ url('/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
+                height="60" width="60">
         </div>
-        <footer class="footer-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="footer-copyright">
-                            <p>2020 @<a href="#">Aazztech</a>
-                            </p>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                            class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-danger navbar-badge">3</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="{{ url('/dist/img/user1-128x128.jpg') }}" alt="User Avatar"
+                                    class="img-size-50 mr-3 img-circle">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        Brad Diesel
+                                        <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                                    </h3>
+                                    <p class="text-sm">Call me whenever you can...</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="{{ url('/dist/img/user8-128x128.jpg') }}" alt="User Avatar"
+                                    class="img-size-50 img-circle mr-3">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        John Pierce
+                                        <span class="float-right text-sm text-muted">
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                    </h3>
+                                    <p class="text-sm">I got your message bro</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <!-- Message Start -->
+                            <div class="media">
+                                <img src="{{ url('/dist/img/user3-128x128.jpg') }}" alt="User Avatar"
+                                    class="img-size-50 img-circle mr-3">
+                                <div class="media-body">
+                                    <h3 class="dropdown-item-title">
+                                        Nora Silvester
+                                        <span class="float-right text-sm text-warning"><i
+                                                class="fas fa-star"></i></span>
+                                    </h3>
+                                    <p class="text-sm">The subject goes here</p>
+                                    <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                                </div>
+                            </div>
+                            <!-- Message End -->
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                    </div>
+                </li>
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">15</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 friend requests
+                            <span class="float-right text-muted text-sm">12 hours</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 new reports
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true"
+                        href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="{{ url('/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="{{ url('/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+                            alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="footer-menu text-right">
-                            <ul>
-                                <li>
-                                    <a href="#">About</a>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard v1</p>
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="#">Team</a>
+                                <li class="nav-item">
+                                    <a href="./index2.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard v2</p>
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="#">Contact</a>
+                                <li class="nav-item">
+                                    <a href="./index3.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard v3</p>
+                                    </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Widgets
+                                    <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Layout Options
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right">6</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Top Navigation</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Top Navigation + Sidebar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Boxed</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Sidebar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Sidebar <small>+ Custom Area</small></p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Navbar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Footer</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Collapsed Sidebar</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Charts
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>ChartJS</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/flot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Flot</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/inline.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inline</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/uplot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>uPlot</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    UI Elements
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/UI/general.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>General</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/icons.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Icons</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/buttons.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Buttons</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/sliders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Sliders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/modals.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Modals & Alerts</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/navbar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Navbar & Tabs</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/timeline.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Timeline</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/ribbons.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ribbons</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Forms
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/forms/general.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>General Elements</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/forms/advanced.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Advanced Elements</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/forms/editors.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Editors</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/forms/validation.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Validation</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Tables
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/tables/simple.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Simple Tables</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/tables/data.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>DataTables</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>jsGrid</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-item">
+                            <a href="pages/calendar.html" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    Calendar
+                                    <span class="badge badge-info right">2</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/gallery.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Gallery
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/kanban.html" class="nav-link">
+                                <i class="nav-icon fas fa-columns"></i>
+                                <p>
+                                    Kanban Board
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-envelope"></i>
+                                <p>
+                                    Mailbox
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/mailbox/mailbox.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inbox</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/mailbox/compose.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Compose</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Read</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Pages
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/examples/invoice.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Invoice</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/profile.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Profile</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/e-commerce.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>E-commerce</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/projects.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Projects</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/project-add.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Project Add</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/project-edit.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Project Edit</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/project-detail.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Project Detail</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/contacts.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Contacts</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/faq.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FAQ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/contact-us.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Contact us</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>
+                                    Extras
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Login & Register v1
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="pages/examples/login.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Login v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/register.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/forgot-password.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Forgot Password v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/recover-password.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Recover Password v1</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Login & Register v2
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="pages/examples/login-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Login v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/register-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/forgot-password-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Forgot Password v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/recover-password-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Recover Password v2</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/lockscreen.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lockscreen</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Legacy User Menu</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/language-menu.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Language Menu</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/404.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Error 404</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/500.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Error 500</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/pace.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pace</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/blank.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Blank Page</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="starter.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Starter Page</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-search"></i>
+                                <p>
+                                    Search
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/search/simple.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Simple Search</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/search/enhanced.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Enhanced</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header">MISCELLANEOUS</li>
+                        <li class="nav-item">
+                            <a href="iframe.html" class="nav-link">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Tabbed IFrame Plugin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Documentation</p>
+                            </a>
+                        </li>
+                        <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle nav-icon"></i>
+                                <p>Level 1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <p>
+                                    Level 1
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Level 2
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Level 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Level 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle nav-icon"></i>
+                                <p>Level 1</p>
+                            </a>
+                        </li>
+                        <li class="nav-header">LABELS</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-danger"></i>
+                                <p class="text">Important</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-warning"></i>
+                                <p>Warning</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-info"></i>
+                                <p>Informational</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Dashboard</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard v1</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>150</h3>
+
+                                    <p>New Orders</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-bag"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
                         </div>
-                        <!-- ends: .Footer Menu -->
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                                    <p>Bounce Rate</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-stats-bars"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3>44</h3>
+
+                                    <p>User Registrations</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-person-add"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3>65</h3>
+
+                                    <p>Unique Visitors</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i
+                                        class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
                     </div>
-                </div>
+                    <!-- /.row -->
+                    <!-- Main row -->
+                    <div class="row">
+                        <!-- Left col -->
+                        <section class="col-lg-7 connectedSortable">
+                            <!-- Custom tabs (Charts with tabs)-->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        <i class="fas fa-chart-pie mr-1"></i>
+                                        Sales
+                                    </h3>
+                                    <div class="card-tools">
+                                        <ul class="nav nav-pills ml-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#revenue-chart"
+                                                    data-toggle="tab">Area</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="tab-content p-0">
+                                        <!-- Morris chart - Sales -->
+                                        <div class="chart tab-pane active" id="revenue-chart"
+                                            style="position: relative; height: 300px;">
+                                            <canvas id="revenue-chart-canvas" height="300"
+                                                style="height: 300px;"></canvas>
+                                        </div>
+                                        <div class="chart tab-pane" id="sales-chart"
+                                            style="position: relative; height: 300px;">
+                                            <canvas id="sales-chart-canvas" height="300"
+                                                style="height: 300px;"></canvas>
+                                        </div>
+                                    </div>
+                                </div><!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+
+                            <!-- DIRECT CHAT -->
+                            <div class="card direct-chat direct-chat-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Direct Chat</h3>
+
+                                    <div class="card-tools">
+                                        <span title="3 New Messages" class="badge badge-primary">3</span>
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" title="Contacts"
+                                            data-widget="chat-pane-toggle">
+                                            <i class="fas fa-comments"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <!-- Conversations are loaded here -->
+                                    <div class="direct-chat-messages">
+                                        <!-- Message. Default to the left -->
+                                        <div class="direct-chat-msg">
+                                            <div class="direct-chat-infos clearfix">
+                                                <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                                <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                                            </div>
+                                            <!-- /.direct-chat-infos -->
+                                            <img class="direct-chat-img"
+                                                src="{{ url('/dist/img/user1-128x128.jpg') }}"
+                                                alt="message user image">
+                                            <!-- /.direct-chat-img -->
+                                            <div class="direct-chat-text">
+                                                Is this template really for free? That's unbelievable!
+                                            </div>
+                                            <!-- /.direct-chat-text -->
+                                        </div>
+                                        <!-- /.direct-chat-msg -->
+
+                                        <!-- Message to the right -->
+                                        <div class="direct-chat-msg right">
+                                            <div class="direct-chat-infos clearfix">
+                                                <span class="direct-chat-name float-right">Sarah Bullock</span>
+                                                <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                                            </div>
+                                            <!-- /.direct-chat-infos -->
+                                            <img class="direct-chat-img"
+                                                src="{{ url('/dist/img/user3-128x128.jpg') }}"
+                                                alt="message user image">
+                                            <!-- /.direct-chat-img -->
+                                            <div class="direct-chat-text">
+                                                You better believe it!
+                                            </div>
+                                            <!-- /.direct-chat-text -->
+                                        </div>
+                                        <!-- /.direct-chat-msg -->
+
+                                        <!-- Message. Default to the left -->
+                                        <div class="direct-chat-msg">
+                                            <div class="direct-chat-infos clearfix">
+                                                <span class="direct-chat-name float-left">Alexander Pierce</span>
+                                                <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
+                                            </div>
+                                            <!-- /.direct-chat-infos -->
+                                            <img class="direct-chat-img"
+                                                src="{{ url('/dist/img/user1-128x128.jpg') }}"
+                                                alt="message user image">
+                                            <!-- /.direct-chat-img -->
+                                            <div class="direct-chat-text">
+                                                Working with AdminLTE on a great new app! Wanna join?
+                                            </div>
+                                            <!-- /.direct-chat-text -->
+                                        </div>
+                                        <!-- /.direct-chat-msg -->
+
+                                        <!-- Message to the right -->
+                                        <div class="direct-chat-msg right">
+                                            <div class="direct-chat-infos clearfix">
+                                                <span class="direct-chat-name float-right">Sarah Bullock</span>
+                                                <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
+                                            </div>
+                                            <!-- /.direct-chat-infos -->
+                                            <img class="direct-chat-img"
+                                                src="{{ url('/dist/img/user3-128x128.jpg') }}"
+                                                alt="message user image">
+                                            <!-- /.direct-chat-img -->
+                                            <div class="direct-chat-text">
+                                                I would love to.
+                                            </div>
+                                            <!-- /.direct-chat-text -->
+                                        </div>
+                                        <!-- /.direct-chat-msg -->
+
+                                    </div>
+                                    <!--/.direct-chat-messages-->
+
+                                    <!-- Contacts are loaded here -->
+                                    <div class="direct-chat-contacts">
+                                        <ul class="contacts-list">
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img"
+                                                        src="{{ url('/dist/img/user1-128x128.jpg') }}"
+                                                        alt="User Avatar">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            Count Dracula
+                                                            <small
+                                                                class="contacts-list-date float-right">2/28/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">How have you been? I
+                                                            was...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img"
+                                                        src="{{ url('/dist/img/user7-128x128.jpg') }}"
+                                                        alt="User Avatar">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            Sarah Doe
+                                                            <small
+                                                                class="contacts-list-date float-right">2/23/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">I will be waiting for...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img"
+                                                        src="{{ url('/dist/img/user3-128x128.jpg') }}"
+                                                        alt="User Avatar">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            Nadia Jolie
+                                                            <small
+                                                                class="contacts-list-date float-right">2/20/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">I'll call you back at...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img"
+                                                        src="{{ url('/dist/img/user5-128x128.jpg') }}"
+                                                        alt="User Avatar">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            Nora S. Vans
+                                                            <small
+                                                                class="contacts-list-date float-right">2/10/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">Where is your new...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img"
+                                                        src="{{ url('/dist/img/user6-128x128.jpg') }}"
+                                                        alt="User Avatar">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            John K.
+                                                            <small
+                                                                class="contacts-list-date float-right">1/27/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">Can I take a look at...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img"
+                                                        src="{{ url('/dist/img/user8-128x128.jpg') }}"
+                                                        alt="User Avatar">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            Kenneth M.
+                                                            <small
+                                                                class="contacts-list-date float-right">1/4/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">Never mind I found...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                        </ul>
+                                        <!-- /.contacts-list -->
+                                    </div>
+                                    <!-- /.direct-chat-pane -->
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="text" name="message" placeholder="Type Message ..."
+                                                class="form-control">
+                                            <span class="input-group-append">
+                                                <button type="button" class="btn btn-primary">Send</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.card-footer-->
+                            </div>
+                            <!--/.direct-chat -->
+
+                            <!-- TO DO List -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        <i class="ion ion-clipboard mr-1"></i>
+                                        To Do List
+                                    </h3>
+
+                                    <div class="card-tools">
+                                        <ul class="pagination pagination-sm">
+                                            <li class="page-item"><a href="#" class="page-link">&laquo;</a>
+                                            </li>
+                                            <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                            <li class="page-item"><a href="#" class="page-link">&raquo;</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <ul class="todo-list" data-widget="todo-list">
+                                        <li>
+                                            <!-- drag handle -->
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <!-- checkbox -->
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo1"
+                                                    id="todoCheck1">
+                                                <label for="todoCheck1"></label>
+                                            </div>
+                                            <!-- todo text -->
+                                            <span class="text">Design a nice theme</span>
+                                            <!-- Emphasis label -->
+                                            <small class="badge badge-danger"><i class="far fa-clock"></i> 2
+                                                mins</small>
+                                            <!-- General tools such as edit or delete-->
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo2" id="todoCheck2"
+                                                    checked>
+                                                <label for="todoCheck2"></label>
+                                            </div>
+                                            <span class="text">Make the theme responsive</span>
+                                            <small class="badge badge-info"><i class="far fa-clock"></i> 4
+                                                hours</small>
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo3"
+                                                    id="todoCheck3">
+                                                <label for="todoCheck3"></label>
+                                            </div>
+                                            <span class="text">Let theme shine like a star</span>
+                                            <small class="badge badge-warning"><i class="far fa-clock"></i> 1
+                                                day</small>
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo4"
+                                                    id="todoCheck4">
+                                                <label for="todoCheck4"></label>
+                                            </div>
+                                            <span class="text">Let theme shine like a star</span>
+                                            <small class="badge badge-success"><i class="far fa-clock"></i> 3
+                                                days</small>
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo5"
+                                                    id="todoCheck5">
+                                                <label for="todoCheck5"></label>
+                                            </div>
+                                            <span class="text">Check your messages and notifications</span>
+                                            <small class="badge badge-primary"><i class="far fa-clock"></i> 1
+                                                week</small>
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="handle">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </span>
+                                            <div class="icheck-primary d-inline ml-2">
+                                                <input type="checkbox" value="" name="todo6"
+                                                    id="todoCheck6">
+                                                <label for="todoCheck6"></label>
+                                            </div>
+                                            <span class="text">Let theme shine like a star</span>
+                                            <small class="badge badge-secondary"><i class="far fa-clock"></i> 1
+                                                month</small>
+                                            <div class="tools">
+                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-trash-o"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer clearfix">
+                                    <button type="button" class="btn btn-primary float-right"><i
+                                            class="fas fa-plus"></i> Add item</button>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        </section>
+                        <!-- /.Left col -->
+                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                        <section class="col-lg-5 connectedSortable">
+
+                            <!-- Map card -->
+                            <div class="card bg-gradient-primary">
+                                <div class="card-header border-0">
+                                    <h3 class="card-title">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>
+                                        Visitors
+                                    </h3>
+                                    <!-- card tools -->
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-primary btn-sm daterange"
+                                            title="Date range">
+                                            <i class="far fa-calendar-alt"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-sm"
+                                            data-card-widget="collapse" title="Collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <div class="card-body">
+                                    <div id="world-map" style="height: 250px; width: 100%;"></div>
+                                </div>
+                                <!-- /.card-body-->
+                                <div class="card-footer bg-transparent">
+                                    <div class="row">
+                                        <div class="col-4 text-center">
+                                            <div id="sparkline-1"></div>
+                                            <div class="text-white">Visitors</div>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-4 text-center">
+                                            <div id="sparkline-2"></div>
+                                            <div class="text-white">Online</div>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-4 text-center">
+                                            <div id="sparkline-3"></div>
+                                            <div class="text-white">Sales</div>
+                                        </div>
+                                        <!-- ./col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                            </div>
+                            <!-- /.card -->
+
+                            <!-- solid sales graph -->
+                            <div class="card bg-gradient-info">
+                                <div class="card-header border-0">
+                                    <h3 class="card-title">
+                                        <i class="fas fa-th mr-1"></i>
+                                        Sales Graph
+                                    </h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn bg-info btn-sm"
+                                            data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <canvas class="chart" id="line-chart"
+                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer bg-transparent">
+                                    <div class="row">
+                                        <div class="col-4 text-center">
+                                            <input type="text" class="knob" data-readonly="true" value="20"
+                                                data-width="60" data-height="60" data-fgColor="#39CCCC">
+
+                                            <div class="text-white">Mail-Orders</div>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-4 text-center">
+                                            <input type="text" class="knob" data-readonly="true" value="50"
+                                                data-width="60" data-height="60" data-fgColor="#39CCCC">
+
+                                            <div class="text-white">Online</div>
+                                        </div>
+                                        <!-- ./col -->
+                                        <div class="col-4 text-center">
+                                            <input type="text" class="knob" data-readonly="true" value="30"
+                                                data-width="60" data-height="60" data-fgColor="#39CCCC">
+
+                                            <div class="text-white">In-Store</div>
+                                        </div>
+                                        <!-- ./col -->
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.card-footer -->
+                            </div>
+                            <!-- /.card -->
+
+                            <!-- Calendar -->
+                            <div class="card bg-gradient-success">
+                                <div class="card-header border-0">
+
+                                    <h3 class="card-title">
+                                        <i class="far fa-calendar-alt"></i>
+                                        Calendar
+                                    </h3>
+                                    <!-- tools card -->
+                                    <div class="card-tools">
+                                        <!-- button with a dropdown -->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-success btn-sm dropdown-toggle"
+                                                data-toggle="dropdown" data-offset="-52">
+                                                <i class="fas fa-bars"></i>
+                                            </button>
+                                            <div class="dropdown-menu" role="menu">
+                                                <a href="#" class="dropdown-item">Add new event</a>
+                                                <a href="#" class="dropdown-item">Clear events</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a href="#" class="dropdown-item">View calendar</a>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-success btn-sm"
+                                            data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-success btn-sm"
+                                            data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <!-- /. tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body pt-0">
+                                    <!--The calendar -->
+                                    <div id="calendar" style="width: 100%"></div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </section>
+                        <!-- right col -->
+                    </div>
+                    <!-- /.row (main row) -->
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.2.0
             </div>
         </footer>
-    </main>
-    <div id="overlayer">
-        <span class="loader-overlay">
-            <div class="atbd-spin-dots spin-lg">
-                <span class="spin-dot badge-dot dot-primary"></span>
-                <span class="spin-dot badge-dot dot-primary"></span>
-                <span class="spin-dot badge-dot dot-primary"></span>
-                <span class="spin-dot badge-dot dot-primary"></span>
-            </div>
-        </span>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
     </div>
-    <a href="#" class="customizer-trigger">
-        <span data-feather="settings"></span></a>
-    <div class="customizer-wrapper">
-        <div class="customizer">
-            <div class="customizer__head">
-                <h4 class="customizer__title">Customizer</h4>
-                <span class="customizer__sub-title">Customize your overview page layout</span>
-                <a href="#" class="customizer-close">
-                    <span data-feather="x"></span></a>
-            </div>
-            <div class="customizer__body">
-                <div class="customizer__single">
-                    <h4>Layout Type</h4>
-                    <ul class="customizer-list d-flex layout">
-                        <li class="customizer-list__item">
-                            <a href="https://demo.jsnorm.com/html/strikingdash/strikingdash/ltr" class="active">
-                                <img src="img/ltr.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                        <li class="customizer-list__item">
-                            <a href="https://demo.jsnorm.com/html/strikingdash/strikingdash/rtl" class="">
-                                <img src="img/rtl.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ends: .customizer__single -->
+    <!-- ./wrapper -->
 
-                <div class="customizer__single">
-                    <h4>Sidebar Type</h4>
-                    <ul class="customizer-list d-flex l_sidebar">
-                        <li class="customizer-list__item">
-                            <a href="#" data-layout="light" class="active">
-                                <img src="img/light.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                        <li class="customizer-list__item">
-                            <a href="#" data-layout="dark">
-                                <img src="img/dark.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ends: .customizer__single -->
-
-                <div class="customizer__single">
-                    <h4>Navbar Type</h4>
-                    <ul class="customizer-list d-flex l_navbar">
-                        <li class="customizer-list__item">
-                            <a href="#" data-layout="side" class="active">
-                                <img src="img/side.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                        <li class="customizer-list__item top">
-                            <a href="#" data-layout="top">
-                                <img src="img/top.png" alt="">
-                                <i class="fa fa-check-circle"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ends: .customizer__single -->
-            </div>
-        </div>
-    </div>
-    <div class="overlay-dark-sidebar"></div>
-    <div class="customizer-overlay"></div>
-
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
-    <!-- inject:js-->
-
-    <script src="{{ url('/js/plugins.min.js') }} "></script>
-
-    <script src="{{ url('/js/script.min.js') }} "></script>
-    <!-- endinject-->
+    <!-- jQuery -->
+    <script src="{{ url('/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="{{ url('/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ url('/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- ChartJS -->
+    <script src="{{ url('/plugins/chart.js/Chart.min.js') }}"></script>
+    <!-- Sparkline -->
+    <script src="{{ url('/plugins/sparklines/sparkline.js') }}"></script>
+    <!-- JQVMap -->
+    <script src="{{ url('/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+    <script src="{{ url('/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="{{ url('/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+    <!-- daterangepicker -->
+    <script src="{{ url('/plugins/moment/moment.min.js') }}"></script>
+    <script src="{{ url('/plugins/daterangepicker/daterangepicker.js') }}"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="{{ url('/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <!-- Summernote -->
+    <script src="{{ url('/plugins/summernote/summernote-bs4.min.js') }}"></script>
+    <!-- overlayScrollbars -->
+    <script src="{{ url('/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ url('/dist/js/adminlte.js') }}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{ url('/dist/js/demo.js') }}"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="{{ url('/dist/js/pages/dashboard.js') }}"></script>
 </body>
 
 </html>
