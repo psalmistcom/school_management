@@ -4,6 +4,8 @@
     <div class="card-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
+        @include('_message')
+
         <form action="{{ url('/login') }}" method="post">
             @csrf
             {{ csrf_field() }}

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AuthRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,13 +15,11 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    function authLogin(AuthRequest $request)
+    function authLogin(Request $request)
     {
-        $request->validated($request->all());
         $remember = !empty($request->remember) ? true : false;
-        $data = Auth::attempt($request->only(['email', 'password']), $remember);
 
-        if (!$data) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $remember)) {
             return redirect('admin/dashboard');
         } else {
             return redirect()->back()->with('error', 'wrong credentials');
@@ -32,7 +29,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-
-        return redirect(url('/'));
+        return redirect(url(''));
     }
 }
