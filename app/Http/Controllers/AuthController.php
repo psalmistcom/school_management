@@ -6,6 +6,7 @@ use App\Mail\ForgotPasswordMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
@@ -71,6 +72,32 @@ class AuthController extends Controller
                 ->with('success', 'Check your email for a password reset link');
         } else {
             return redirect()->back()->with('error', "Email not found");
+        }
+    }
+
+    public function reset($remember_token)
+    {
+        $user = User::getTokenSingle($remember_token);
+
+        if (!empty($user)) {
+            $data['user'] = $user;
+            return view('auth.reset', $data);
+        } else {
+            abort(404);
+        }
+    }
+
+    public function postResetPassword($token, Request $request)
+    {
+        if ($request->password == $request->cpassword) {
+            $user = User::getTokenSingle($token);
+            $user->password = Hash::make($request->password);
+            $user->remember_token = Str::random(30);
+            $user->save();
+
+            return redirect('login')->with('success', "Password reset succesfully");
+        } else {
+            return redirect()->back()->with('error', "Password does not match!");
         }
     }
     public function logout()
