@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AuthController::class, 'login']);
 Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'authLogin']);
+Route::get('/logout', [AuthController::class, 'logout']);
 
 
 // Admin Routes 
