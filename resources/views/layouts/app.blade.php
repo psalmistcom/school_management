@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>{{ !empty($header_title) ? $header_title : '' }} - School</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -27,16 +27,11 @@
     <link rel="stylesheet" href="{{ url('/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ url('/plugins/summernote/summernote-bs4.min.css') }}">
+    @yield('styles')
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
-        <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="{{ url('/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
-                height="60" width="60">
-        </div>
 
         <!-- Navbar -->
         @include('layouts.header')
@@ -92,6 +87,7 @@
     <script src="{{ url('/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ url('/dist/js/pages/dashboard.js') }}"></script>
+    @yield('scripts')
 </body>
 
 </html>
