@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -28,26 +29,33 @@ Route::post('/forgot-password', [AuthController::class, 'postForgotPassword']);
 Route::get('/reset/{token}', [AuthController::class, 'reset']);
 Route::post('/reset/{token}', [AuthController::class, 'postResetPassword']);
 
-Route::get('/admin/admin/list', function () {
-    return view('admin.admin.list');
-});
 
 // Admin Routes 
 Route::group(['middleware' => 'admin'], function () {
-    Route::get('admin/dashboard', [DashboardController::class, 'dashboard']);
+    Route::group(['prefix' => 'admin'], function () {
+        Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+        Route::get('/admin/list', [AdminController::class, 'list']);
+        Route::get('/admin/add', [AdminController::class, 'add']);
+    });
 });
 
 //Teacher Routes
 Route::group(['middleware' => 'teacher'], function () {
-    Route::get('teacher/dashboard', [DashboardController::class, 'dashboard']);
+    Route::group(['prefix' => 'teacher'], function () {
+        Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+    });
 });
 
 // Student Route 
 Route::group(['middleware' => 'student'], function () {
-    Route::get('student/dashboard', [DashboardController::class, 'dashboard']);
+    Route::group(['prefix' => 'student'], function () {
+        Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+    });
 });
 
 // Parent Route 
 Route::group(['middleware' => 'parent'], function () {
-    Route::get('parent/dashboard', [DashboardController::class, 'dashboard']);
+    Route::group(['prefix' => 'parent'], function () {
+        Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+    });
 });
