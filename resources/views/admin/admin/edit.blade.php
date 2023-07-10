@@ -35,20 +35,25 @@
                                     <div class="form-group">
                                         <label>Name</label>
                                         <input type="text" class="form-control" name="name"
-                                            value="{{ $getRecord->name }}" required placeholder="Full Name">
+                                            value="{{ old('name', $getRecord->name) }}" required placeholder="Full Name">
                                     </div>
                                     <div class="form-group">
                                         <label>Email </label>
-                                        <input type="email" value="{{ $getRecord->email }}"class="form-control"
-                                            name="email" required placeholder="Email">
+                                        <input type="email" value="{{ old('email', $getRecord->email) }}"
+                                            class="form-control" name="email" required placeholder="Email" />
+                                        <span class="text-danger">
+                                            {{ $errors->first('email') }}
+                                        </span>
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
                                         <input type="text" class="form-control" name="password" placeholder="Password">
                                         <p>Enter new password if you want to update the password</p>
+                                        <span class="text-danger">
+                                            {{ $errors->first('password') }}
+                                        </span>
                                     </div>
                                 </div>
-                                <!-- /.card-body -->
 
                                 <div class="card-footer">
                                     <button type="submit" class="btn btn-primary">Update</button>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class AdminController extends Controller
 {
@@ -24,6 +25,16 @@ class AdminController extends Controller
 
     public function insert(Request $request)
     {
+        request()->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => 'required|email|unique:users',
+            'password' => [
+                'required', Password::min(7)
+                    ->mixedCase()
+                    ->letters()
+                    ->numbers()
+            ],
+        ]);
 
         $user = new User;
         $user->name = trim($request->name);
@@ -48,10 +59,20 @@ class AdminController extends Controller
 
     public function update($id, Request $request)
     {
+        request()->validate([
+            'email' => 'required|email|unique:users,email,' . $id,
+        ]);
+
         $user = User::getSingle($id);
         $user->name = trim($request->name);
         $user->email = trim($request->email);
         if (!empty($request->password)) {
+            request()->validate([
+                'password' => Password::min(7)
+                    ->mixedCase()
+                    ->letters()
+                    ->numbers(),
+            ]);
             $user->password = Hash::make($request->password);
         }
         $user->save();
