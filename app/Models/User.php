@@ -59,6 +59,7 @@ class User extends Authenticatable
     {
         return self::select('users.*')
             ->where('user_type', '=', 1)
+            ->where('is_delete', '=', 0)
             ->orderBy('id', 'desc')
             ->get();
     }
