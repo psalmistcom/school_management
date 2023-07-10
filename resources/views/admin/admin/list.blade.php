@@ -38,6 +38,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Created Date</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -48,6 +49,12 @@
                                                 <td>{{ $value->name }}</td>
                                                 <td>{{ $value->email }}</td>
                                                 <td>{{ $value->created_at }}</td>
+                                                <td>
+                                                    <a href="{{ url('admin/admin/edit/' . $value->id) }}"
+                                                        class="btn btn-primary"> Edit</a>
+                                                    <a href="{{ url('admin/admin/delete/' . $value->id) }}"
+                                                        class="btn btn-danger"> Delete</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
