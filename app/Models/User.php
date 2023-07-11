@@ -61,6 +61,7 @@ class User extends Authenticatable
             ->where('user_type', '=', 1)
             ->where('is_delete', '=', 0)
             ->orderBy('id', 'desc')
-            ->get();
+            // ->get();
+            ->paginate(5);
     }
 }

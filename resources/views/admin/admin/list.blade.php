@@ -27,7 +27,8 @@
                         @include('_message')
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Admin Lists</h3>
+                                <h3 class="card-title"><span class="font-weight-bold">Total Admin Lists :</span>
+                                    {{ $getRecord->total() }}</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body p-0">
@@ -59,6 +60,9 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                <div class="float-left p-10">
+                                    {{ $getRecord->links() }}
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
