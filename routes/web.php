@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ClassController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,12 +35,17 @@ Route::post('/reset/{token}', [AuthController::class, 'postResetPassword']);
 Route::group(['middleware' => 'admin'], function () {
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/dashboard', [DashboardController::class, 'dashboard']);
-        Route::get('/admin/list', [AdminController::class, 'list']);
-        Route::get('/admin/add', [AdminController::class, 'add']);
-        Route::post('/admin/add', [AdminController::class, 'insert']);
-        Route::get('/admin/edit/{id}', [AdminController::class, 'edit']);
-        Route::post('/admin/edit/{id}', [AdminController::class, 'update']);
-        Route::get('/admin/delete/{id}', [AdminController::class, 'delete']);
+        Route::group(['prefix' => 'admin'], function () {
+            Route::get('/list', [AdminController::class, 'list']);
+            Route::get('/add', [AdminController::class, 'add']);
+            Route::post('/add', [AdminController::class, 'insert']);
+            Route::get('/edit/{id}', [AdminController::class, 'edit']);
+            Route::post('/edit/{id}', [AdminController::class, 'update']);
+            Route::get('/delete/{id}', [AdminController::class, 'delete']);
+        });
+        Route::group(['prefix' => 'class'], function () {
+            Route::get('/list', [ClassController::class, 'list']);
+        });
     });
 });
 
