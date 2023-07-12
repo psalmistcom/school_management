@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->tinyInteger('status')->default('0'); // 0. Active 1.inActive
+            $table->tinyInteger('is_delete')->default('0'); // 0. Not deleted 1.Deleted
             $table->integer('created_by')->nullable();
             $table->timestamps();
         });

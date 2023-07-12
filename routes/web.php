@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ClassController;
+use App\Http\Controllers\Admin\ClassController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +45,7 @@ Route::group(['middleware' => 'admin'], function () {
         });
         Route::group(['prefix' => 'class'], function () {
             Route::get('/list', [ClassController::class, 'list']);
+            Route::get('/add', [ClassController::class, 'add']);
         });
     });
 });
