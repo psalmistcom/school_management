@@ -51,7 +51,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        {{-- @include('_message') --}}
+                        @include('_message')
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title"><span class="font-weight-bold">Total Admin Lists :</span>

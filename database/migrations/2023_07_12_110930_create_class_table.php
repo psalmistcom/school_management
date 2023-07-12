@@ -16,8 +16,13 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->tinyInteger('status')->default('0'); // 0. Active 1.inActive
             $table->tinyInteger('is_delete')->default('0'); // 0. Not deleted 1.Deleted
-            $table->integer('created_by')->nullable();
+            $table->unsignedBigInteger('created_by');
             $table->timestamps();
+
+            $table->foreign('created_by')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

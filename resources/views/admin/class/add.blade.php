@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Add new Admin </h1>
+                        <h1>Add new Class </h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ url()->previous() }}">Back</a></li>
-                            <li class="breadcrumb-item active">Add New Admin</li>
+                            <li class="breadcrumb-item active">Add New Class</li>
                         </ol>
                     </div>
                 </div>
@@ -33,28 +33,17 @@
                                 {{ csrf_field() }}
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control" value="{{ old('name') }}"
-                                            name="name" required placeholder="Full Name">
-                                        <span class="text-danger">
-                                            {{ $errors->first('name') }}
-                                        </span>
+                                        <label>Class Name</label>
+                                        <input type="text" class="form-control" name="name" required
+                                            placeholder="Full Name">
+
                                     </div>
                                     <div class="form-group">
-                                        <label>Email </label>
-                                        <input type="email" class="form-control" value="{{ old('email') }}"name="email"
-                                            required placeholder="Email">
-                                        <span class="text-danger">
-                                            {{ $errors->first('email') }}
-                                        </span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" class="form-control" name="password" required
-                                            placeholder="Password">
-                                        <span class="text-danger">
-                                            {{ $errors->first('password') }}
-                                        </span>
+                                        <label>Status </label>
+                                        <select name="status" class="form-control">
+                                            <option value="0"> Active</option>
+                                            <option value="1"> Inactive</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <!-- /.card-body -->

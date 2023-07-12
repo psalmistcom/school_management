@@ -46,6 +46,7 @@ Route::group(['middleware' => 'admin'], function () {
         Route::group(['prefix' => 'class'], function () {
             Route::get('/list', [ClassController::class, 'list']);
             Route::get('/add', [ClassController::class, 'add']);
+            Route::post('/add', [ClassController::class, 'insert']);
         });
     });
 });
