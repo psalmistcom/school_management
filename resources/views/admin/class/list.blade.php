@@ -73,39 +73,34 @@
                                     </thead>
                                     <tbody>
                                         <p class="d-none">{{ $i = 0 }}</p>
-                                        {{-- <tr>
-                                            <td>1</td>
-                                            <td>Name</td>
-                                            <td>Date</td>
-                                            <td>
-                                                <a href="#" class="btn btn-primary"> Edit</a>
-                                                <a href="#" class="btn btn-danger"> Delete</a>
-                                            </td>
-                                        </tr> --}}
-                                        {{-- @foreach ($getRecord as $value)
+                                        @foreach ($getRecord as $value)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 <td>{{ $value->name }}</td>
-                                                <td>{{ $value->email }}</td>
+                                                <td>
+                                                    @if ($value->status == 0)
+                                                        Active
+                                                    @else
+                                                        Inactive
+                                                    @endif
+                                                </td>
+                                                <td>{{ $value->created_by_name }}</td>
                                                 <td>{{ date('F j, Y | H:i A', strtotime($value->created_at)) }}</td>
                                                 <td>
-                                                    <a href="{{ url('admin/admin/edit/' . $value->id) }}"
+                                                    <a href="{{ url('admin/class/edit/' . $value->id) }}"
                                                         class="btn btn-primary"> Edit</a>
-                                                    <a href="{{ url('admin/admin/delete/' . $value->id) }}"
+                                                    <a href="{{ url('admin/class/delete/' . $value->id) }}"
                                                         class="btn btn-danger"> Delete</a>
                                                 </td>
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
 
                                     </tbody>
                                 </table>
 
                                 <div class="float-left p-10">
-                                    Pagination
-                                </div>
-                                {{-- <div class="float-left p-10">
                                     {{ $getRecord->links() }}
-                                </div> --}}
+                                </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
