@@ -49,6 +49,7 @@ Route::group(['middleware' => 'admin'], function () {
             Route::post('/add', [ClassController::class, 'insert']);
             Route::get('/edit/{id}', [ClassController::class, 'edit']);
             Route::post('/edit/{id}', [ClassController::class, 'update']);
+            Route::get('/delete/{id}', [ClassController::class, 'delete']);
         });
     });
 });

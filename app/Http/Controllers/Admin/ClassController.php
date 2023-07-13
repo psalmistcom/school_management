@@ -43,4 +43,22 @@ class ClassController extends Controller
             abort(404);
         }
     }
+
+    public function update($id, Request $request)
+    {
+        $save = ClassModel::getSingle($id);
+        $save->name = $request->name;
+        $save->status = $request->status;
+        $save->save();
+
+        return redirect('admin/class/list')->with('success', 'Class Updated Successfully ');
+    }
+    public function delete($id)
+    {
+        $save = ClassModel::getSingle($id);
+        $save->is_delete = 1;
+        $save->save();
+
+        return redirect('admin/class/list')->with('success', 'Class Deleted successfully');
+    }
 }

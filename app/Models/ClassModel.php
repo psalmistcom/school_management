@@ -15,6 +15,7 @@ class ClassModel extends Model
     {
         $return = ClassModel::select('class.*', 'users.name as created_by_name')
             ->join('users', 'users.id', 'class.created_by')
+            ->where('class.is_delete', '=', 0)
             ->orderBy('class.id', 'desc')
             ->paginate(20);
 
