@@ -54,8 +54,8 @@
                         @include('_message')
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title"><span class="font-weight-bold">Total Admin Lists :</span>
-                                    {{-- {{ $getRecord->total() }} --}} Get total in table
+                                <h3 class="card-title"><span class="font-weight-bold">Total Class Lists :</span>
+                                    {{ $getRecord->total() }}
                                 </h3>
                             </div>
                             <!-- /.card-header -->

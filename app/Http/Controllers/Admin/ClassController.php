@@ -32,4 +32,15 @@ class ClassController extends Controller
 
         return redirect('admin/class/list')->with('success', 'Succesfully added new class');
     }
+
+    public function edit($id)
+    {
+        $data['getRecord'] = ClassModel::getSingle($id);
+        if (!empty($data['getRecord'])) {
+            $data['header_title'] = 'Edit Class';
+            return view('admin.class.edit', $data);
+        } else {
+            abort(404);
+        }
+    }
 }

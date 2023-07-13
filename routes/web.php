@@ -47,6 +47,8 @@ Route::group(['middleware' => 'admin'], function () {
             Route::get('/list', [ClassController::class, 'list']);
             Route::get('/add', [ClassController::class, 'add']);
             Route::post('/add', [ClassController::class, 'insert']);
+            Route::get('/edit/{id}', [ClassController::class, 'edit']);
+            Route::post('/edit/{id}', [ClassController::class, 'update']);
         });
     });
 });

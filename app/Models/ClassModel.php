@@ -20,4 +20,8 @@ class ClassModel extends Model
 
         return $return;
     }
+    static public function getSingle($id)
+    {
+        return self::find($id);
+    }
 }
