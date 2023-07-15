@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\ClassController;
+use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,6 +51,14 @@ Route::group(['middleware' => 'admin'], function () {
             Route::get('/edit/{id}', [ClassController::class, 'edit']);
             Route::post('/edit/{id}', [ClassController::class, 'update']);
             Route::get('/delete/{id}', [ClassController::class, 'delete']);
+        });
+        Route::group(['prefix' => 'subject'], function () {
+            Route::get('/list', [SubjectController::class, 'list']);
+            Route::get('/add', [SubjectController::class, 'add']);
+            Route::post('/add', [SubjectController::class, 'insert']);
+            Route::get('/edit/{id}', [SubjectController::class, 'edit']);
+            Route::post('/edit/{id}', [SubjectController::class, 'update']);
+            Route::get('/delete/{id}', [SubjectController::class, 'delete']);
         });
     });
 });
